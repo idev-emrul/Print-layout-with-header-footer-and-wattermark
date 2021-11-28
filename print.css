@@ -11,11 +11,6 @@
     text-align: center;
 }
 
-.header h2 {
-    font-variant: small-caps;
-    margin: 0;
-}
-
 .footer {
     visibility: hidden;
     width: 100%;
@@ -28,21 +23,8 @@
     text-align: left;
 }
 
-.footer p {
-    padding: 0;
-    margin: 0;
-}
-
-.foot-relative {
-    position: relative;
-}
-
 .print-only {
     display: none !important;
-}
-
-.invoice{
-	margin: 1rem 2rem;
 }
 
 .headerGroup {
@@ -57,7 +39,7 @@
 	background-size: cover;
 	opacity: 0;
 	position: absolute;
-	top: 450px;
+	top: 350px;
 	left: 50%;
 	width: 450px;
 	height: 450px;
@@ -78,13 +60,13 @@
 	}
 
     .header, .header-block {
-        height: 180px;
+        height: 120px;
 		background-color: #fff;
 		padding: 0;
 		margin: 0;
     }
     .footer, .footer-block {
-        height: 120px;
+        height: 100px;
 		background-color: none;
     }
     footer {
@@ -108,20 +90,6 @@
     .invoice-print {
         width: 95%;
     }
-    .no-print {
-        display: none;
-    }
-    .print-only {
-        display: block !important;
-    }
-    .t-body {
-        background: transparent;
-    }
-    .invoiceBody {
-        -webkit-print-color-adjust: exact;
-		margin: auto 0;
-		background: transparent;
-    }
     .header {
         visibility: visible;
     }
@@ -133,6 +101,18 @@
         height: 99%;
         page-break-after: avoid;
         page-break-before: avoid;
+    }
+    /* ----for content management in print layout---- */
+    .no-print {
+        display: none;
+    }
+    .print-only {
+        display: block !important;
+    }
+    /* ----aditional style----- */
+    .page{
+        margin-right:2rem;
+        margin-left: 2rem;
     }
 
 }

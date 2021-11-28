@@ -1,0 +1,140 @@
+/*-----start print layout---*/
+.header {
+    visibility: hidden;
+    width: 100%;
+	height: 10px;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 99999999 !important;
+    text-align: center;
+}
+
+.header h2 {
+    font-variant: small-caps;
+    margin: 0;
+}
+
+.footer {
+    visibility: hidden;
+    width: 100%;
+	height: 120px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    background: #fff;
+    z-index: 99999999 !important;
+    text-align: left;
+}
+
+.footer p {
+    padding: 0;
+    margin: 0;
+}
+
+.foot-relative {
+    position: relative;
+}
+
+.print-only {
+    display: none !important;
+}
+
+.invoice{
+	margin: 1rem 2rem;
+}
+
+.headerGroup {
+	position: relative;
+	background: transparent;
+}
+
+.headerGroup:after {
+	font-size: 42px;
+	color: #fff; 
+	filter: grayscale(0.5);
+	background-size: cover;
+	opacity: 0;
+	position: absolute;
+	top: 450px;
+	left: 50%;
+	width: 450px;
+	height: 450px;
+	z-index: 1 !important;
+	transform: translate(-50%);
+}
+
+/* ============media start========== */
+@media print {
+
+	.headerGroup:after {
+		opacity: .1;
+	}
+	.content ,.content-wrapper{
+		padding: 0 !important;
+		margin: 0 !important;
+		background-color: #fff;
+	}
+
+    .header, .header-block {
+        height: 180px;
+		background-color: #fff;
+		padding: 0;
+		margin: 0;
+    }
+    .footer, .footer-block {
+        height: 120px;
+		background-color: none;
+    }
+    footer {
+        page-break-after: always;
+		height: 120px !important;
+    }
+    @page {
+        size: A4;
+        -webkit-print-color-adjust: exact;
+        margin: 0 !important;
+		padding:0 !important;
+		width: 100%;
+		height: 100%;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tfoot {
+        display: table-footer-group;
+    }
+    .invoice-print {
+        width: 95%;
+    }
+    .no-print {
+        display: none;
+    }
+    .print-only {
+        display: block !important;
+    }
+    .t-body {
+        background: transparent;
+    }
+    .invoiceBody {
+        -webkit-print-color-adjust: exact;
+		margin: auto 0;
+		background: transparent;
+    }
+    .header {
+        visibility: visible;
+    }
+    .footer {
+        visibility: visible;
+    }
+      html, body {
+        border: 1px solid white;
+        height: 99%;
+        page-break-after: avoid;
+        page-break-before: avoid;
+    }
+
+}
+/* ==============end print=========== */
+/* ================================== */

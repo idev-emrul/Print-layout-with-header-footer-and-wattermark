@@ -1,4 +1,16 @@
 /*-----start print layout---*/
+.content ,.content-wrapper{
+    background-color: #c9c9c9;
+}
+
+.page-container{
+    background: #fff;
+    width: 8.5in;
+    margin: 0.5in auto 0.5in auto;
+    margin-right: auto;
+    padding: 0.5in;
+}
+
 .header {
     visibility: hidden;
     width: 100%;
@@ -49,6 +61,11 @@
 
 /* ============media start========== */
 @media print {
+    .page-container{
+        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
 
 	.headerGroup:after {
 		opacity: .1;
@@ -56,7 +73,7 @@
 	.content ,.content-wrapper{
 		padding: 0 !important;
 		margin: 0 !important;
-		background-color: #fff;
+		background-color: #ffffff;
 	}
 
     .header, .header-block {
@@ -69,6 +86,7 @@
         height: 100px;
 		background-color: none;
     }
+
     footer {
         page-break-after: always;
 		height: 120px !important;
